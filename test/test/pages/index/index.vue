@@ -108,7 +108,7 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
 	.height{
 		height: 80px;
 	}
