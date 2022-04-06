@@ -1,0 +1,11 @@
+
+.height{
+	height: 80px;
+}
+page{
+	background-color: #007AFF;
+}
+.content{
+	font-size: 25px;
+}
+
