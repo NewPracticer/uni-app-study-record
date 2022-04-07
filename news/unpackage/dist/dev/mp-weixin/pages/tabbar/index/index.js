@@ -105,6 +105,9 @@ try {
   components = {
     navbar: function() {
       return __webpack_require__.e(/*! import() | components/navbar/navbar */ "components/navbar/navbar").then(__webpack_require__.bind(null, /*! @/components/navbar/navbar.vue */ 32))
+    },
+    tab: function() {
+      return Promise.all(/*! import() | components/tab/tab */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/tab/tab")]).then(__webpack_require__.bind(null, /*! @/components/tab/tab.vue */ 39))
     }
   }
 } catch (e) {

@@ -1,7 +1,7 @@
 <template>
 	<view class="navbar">
 		<view class="navbar-fixed">
-			<!-- 获取手机信息后， 动态赋值状态栏 -->
+			<!-- 状态栏 -->
 			<view :style="{height:statusBarHeight+'px'}"></view>
 			<!-- 导航栏内容 -->
 			<view class="navbar-content" :class="{search:isSearch}" :style="{height:navBarHeight+'px',width:windowWidth+'px'}"
@@ -12,7 +12,7 @@
 				<view v-if="!isSearch" class="navbar-search">
 					<!-- 非搜索页显示 -->
 					<view class="navbar-search_icon">
-						<uni-icons type="search"></uni-icons>
+						<uni-icons type="search" size="16" color="#999"></uni-icons>
 					</view>
 					<view class="navbar-search_text">uni-app、vue</view>
 				</view>
@@ -52,14 +52,14 @@
 			}
 		},
 		created() {
-			// 获取手机系统信息 获取状态栏高度，适配多个手机 
+			// 获取手机系统信息
 			const info = uni.getSystemInfoSync()
 			// 设置状态栏高度
 			this.statusBarHeight = info.statusBarHeight
 			this.windowWidth = info.windowWidth
 			// h5 app mp-alipay
 			// #ifndef H5 || APP-PLUS || MP-ALIPAY
-			// 获取微信胶囊的位置
+			// 获取胶囊的位置
 			const menuButtonInfo = uni.getMenuButtonBoundingClientRect()
 			console.log(menuButtonInfo);
 			// (胶囊底部高度 - 状态栏的高度) + (胶囊顶部高度 - 状态栏内的高度) = 导航栏的高度
@@ -93,7 +93,8 @@
 </script>
 
 <style lang="scss">
-	@import  '../../common/css/icons.css';
+	@import '../../common/css/icons.css';
+
 	.navbar {
 		.navbar-fixed {
 			position: fixed;
