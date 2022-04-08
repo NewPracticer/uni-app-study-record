@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view @click="open">
 		<!--基础卡片-->
 		<view v-if="item.mode==='base'" class="listcard">
 			<view class="listcard-image">
@@ -10,6 +10,7 @@
 					<text>
 						{{item.title}}
 					</text>
+					<like :item = "item"></like>
 				</view>
 				<view class="listcard-content_des">
 					<view class="listcard-content_des-label">
@@ -29,6 +30,7 @@
 					<text>
 						{{item.title}}
 					</text>
+					<like :item = "item"></like>
 				</view>
 				<view class="listcard-image">
 					<view v-for="item in 3 " class="listcard-image_item">
@@ -57,6 +59,7 @@
 					<text>
 						{{item.title}}
 					</text>
+					<like :item = "item"></like>
 				</view>
 				<view class="listcard-content_des">
 					<view class="listcard-content_des-label">
@@ -90,6 +93,11 @@
 			return {
 				
 			};
+		},
+		methods:{
+			open(){
+				this.$emit('click',this.item)
+			}
 		}
 	}
 </script>
@@ -114,12 +122,14 @@
 			}
 		}
 		.listcard-content{
+			position: relative;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
 			padding-left: 10px;
 			width: 100%;
 			.listcard-content_title{
+				padding-right: 30px;
 				font-size: 14px;
 				color: #333;
 				font-weight: 400;
@@ -131,6 +141,7 @@
 					-webkit-line-clamp:2;
 					-webkit-box-orient:vertical
 				}
+				
 			}
 			.listcard-content_des{
 				display: flex;

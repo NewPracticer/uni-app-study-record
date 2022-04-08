@@ -85,7 +85,7 @@
 				const {
 					value
 				} = e.detail
-
+				console.log('输入内容',value)
 				this.$emit('input', value)
 			}
 		}

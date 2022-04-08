@@ -23,6 +23,12 @@
 			}
 		},
 		onLoad() {
+			uni.$on('labelChange',(res)=>{
+				this.tabList = []
+				this.tabIndex = 0
+				this.activeIndex = 0
+				this.getLabel()
+			})
 			console.log("tab的onload方法"),
 			this.getLabel()
 		},
@@ -45,6 +51,7 @@
 			change(current){
 				console.log("当前current的值",current);
 				this.tabIndex = current;
+				this.activeIndex = current
 			}
 		}
 	}
