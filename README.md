@@ -4,6 +4,8 @@ uniapp学习记录
 ## 学习路线
 1. [官方文档](https://uniapp.dcloud.io/)
 2. [入门到实战](https://coding.imooc.com/class/521.html)[22小时]
+3. CSS部分
+    + [CSS基础及入门](https://coding.imooc.com/class/164.html)[11小时]
 
 ## 笔记
 + uniapp
@@ -50,4 +52,32 @@ uniapp学习记录
             + main.js 应用入口
             + mainfest.json 项目配置
             + page.json 页面配置
++ CSS (Cascading Style Sheet 层叠样式表)梳理
+    + CSS 基础
+        + 选择器（ 属性:值 ）
+            + 作用
+                + 用于匹配HTML元素
+                + 有不同的匹配规则
+                + 多个选择器可叠加
+            + 解析与性能：从右到左，及从小到大进行更快速的解析
+            + 分类
+                + 元素选择器 a{} 权重 +1 
+                + 伪元素选择器 ::before{} 表示一个真实存在的元素的样式 权重 +0
+                + 类选择器：.link{}  权重 +10 
+                + 属性选择器：[type =radio]{} 权重 +10 
+                + 伪类选择器  :hover{} 表示一个元素某种状态的样式 权重 +10
+                + ID选择器： #id{}  权重 +100 
+                + 组合选择器： [type=checkbox]+label{} 权重 +0
+                + 否定选择器   :not(.link){} 权重 +0
+                + 通用选择器 *{} 权重 +0
+            + 选择器权重
+                + !important优先级最高
+                + 元素属性 优先级高
+                + 相同权重 后写的生效
+        + 非布局样式
+            + 行高
+                + 行高的构成。由一行的linebox决定的，linebox是由inlinebox组成的，inlinebox的高度决定行高的高度
+            + 背景
+    
+            
             
