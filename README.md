@@ -6,6 +6,7 @@ uniapp学习记录
 2. [入门到实战](https://coding.imooc.com/class/521.html)[22小时]
 3. CSS部分
     + [CSS基础及入门](https://coding.imooc.com/class/164.html)[11小时]
+    + [前端主流布局进阶与实战](https://coding.imooc.com/class/chapter/527.html#Anchor)[16小时]
 
 ## 笔记
 + uniapp
@@ -125,6 +126,12 @@ uniapp学习记录
             + border-radius: 圆角矩形
             + background: 背景
             + clip-path:  
+        + CSS 动画
+            + 动画的原理：视觉暂留作用。画面的渐变
+            + 动画类型
+                + transition 补间动画
+                + ketframe 关键帧动画。相当于多个补间动画
+                + 逐帧动画。适用于无法补间计算的动画 
             
             
                 
