@@ -78,6 +78,55 @@ uniapp学习记录
             + 行高
                 + 行高的构成。由一行的linebox决定的，linebox是由inlinebox组成的，inlinebox的高度决定行高的高度
             + 背景
-    
+            + 边框
+                + 线型，大小，颜色
+                + 边框背景图
+                + 边框衔接（三角形）
+            + 滚动
+                + 滚动行为和滚动条
+            + 文字折行
+                + overflow-wrap 通用换行控制
+                    + 是否保留单词 
+                + word-break 针对多字节文字
+                    + 中文句子也是单词
+                + white-space 空白处是否断行
+            + 装饰属性：
+                + 字重：font-weight
+                + 斜体：font-style:itatic
+                + 下划线：text-decoration
+                + 指针： cursor
+        + CSS 布局
+            + 布局基础属性：
+                + diplay。确定元素的显示类型。
+                    + block/ 独立宽高，默认占据一行
+                    + inline/默认不占据一行
+                    + inline-block/ 对内有自己的宽高，对外不占据一行
+                + 确定元素的位置。
+                    + static/ 按照文档流
+                    + relative/ 偏移大小是相对于元素本身的
+                    + absolute/ 脱离文档流，偏移大小是相对于最近的父元素
+                    + fixed/ 脱离文档流，相对于可视区域或者屏幕（viewport）
+                    + z-index/ 相对于人眼，哪个标签在前
+                + flexbox 弹性盒子，盒子本来就是并列的，指定宽度即可。低版本IE不支持
+                + float布局。
+                    + 脱离文档流，但不脱离文本流
+                    + 对自身的影响：形成“块"（BFC）
+                    + 位置尽量靠上
+                    + 对兄弟元素的影响：上面贴非float元素，旁边贴float元素，不影响其他块级元素位置，影响其他块级元素的文本
+                    + 对父级元素的影响：从布局上""消失"
+                    + 清除浮动
+                + inline-block
+                    + 像文本一样排block元素
+                    + 没有清除浮动等问题
+                    + 需要处理间隙
+        + 效果属性
+            + box-shadow: 盒子阴影
+            + text-shadow: 文本阴影
+            + border-radius: 圆角矩形
+            + background: 背景
+            + clip-path:  
+            
+            
+                
             
             
